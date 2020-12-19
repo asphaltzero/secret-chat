@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SecretChat</title>
+    </head>
+    <body>
+        <p>
+            Публичный ключ:<br>
+            <textarea id="area_pubkey" cols="130"></textarea><br>
+            Приватный ключ:<br>
+            <textarea id="area_privkey" cols="130"></textarea><br>
+            <button id="button_key">Создать новую пару ключей</button>
+        </p>
+
+        <p>
+            <input id="server_adr" size="50" value="127.0.0.1:3000"><br>
+            <button id="server_adr_change">Изменить адрес сервера</button>
+            <button id="server_con">Подключиться</button>
+            <button id="server_dis">Отключиться</button>
+        </p>
+
+        <p>
+            Имя:<br>
+            <input id="con_name" size="100"><br>
+            Публичный ключ:<br>
+            <input id="con_pubkey" size="100"><br>
+            <button id="con_add">Добавить контакт</button>
+        </p>
+
+        <p>
+            <table id="con_table" border="1">
+                <caption>Список контактов</caption>
+                <tr>
+                    <th>Имя</th>
+                    <th>Публичный ключ</th>
+                </tr>
+            </table>
+        </p>
+
+        <p>
+            История сообщений:<br>
+            <textarea id="msgs" cols="120" rows="20"></textarea><br>
+            <input id="msg_field" size="120"><br>
+            <button id="btn_send">Отправить сообщение</button>
+        </p>
+
+        <script src="lib/buffer.js"></script>
+        <script src="lib/index.js"></script>
+        <script src="lib/cryptojs.js"></script>
+        <script src="lib/tweetnacl.js"></script>
+        <script src="lib/naclutil.js"></script>
+        <script src="lib/socketio.js"></script>
+        <script src="extpage.js"></script>
+    </body>
+</html>
